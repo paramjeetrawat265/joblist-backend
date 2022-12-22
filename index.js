@@ -1,7 +1,7 @@
 var cors = require('cors');
 const express = require("express");
 const { connection } = require("./Config/db");
-const { JobsRoute } = require('./Routes/jobs.route');
+const { GameRoute } = require('./Routes/jobs.route');
 require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT;
@@ -9,9 +9,9 @@ app.use(express.json());
 app.use(cors())
 
 app.get("/", (req, res) => {
-    res.send("Hello Jobs Backend")
+    res.send("Masai Quizine")
 })
-app.use("/jobs", JobsRoute)
+app.use("/game", GameRoute)
 
 app.listen(PORT, async () => {
     try {

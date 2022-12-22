@@ -1,11 +1,11 @@
 const { Router } = require("express");
-const { PostJobsController, GetJobsController } = require("../Controller/jobs.controller");
+const { PostGameController, GetGameController } = require("../Controller/game.controller");
 
 
-const JobsRoute = Router();
-JobsRoute.post("/", PostJobsController)
-JobsRoute.get("/", GetJobsController)
+const GameRoute = Router();
+GameRoute.post("/", PostGameController)
+GameRoute.get("/", GetGameController)
 
 module.exports = {
-    JobsRoute
+    GameRoute
 }
