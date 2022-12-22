@@ -1,7 +1,7 @@
 var cors = require('cors');
 const express = require("express");
 const { connection } = require("./Config/db");
-const { GameRoute } = require('./Routes/jobs.route');
+const { GameRoute } = require('./Routes/game.route');
 require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT;
